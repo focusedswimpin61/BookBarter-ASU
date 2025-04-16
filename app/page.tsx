@@ -138,8 +138,8 @@ export default function LandingPage() {
               <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-asu-maroon/20 to-asu-gold/20 z-10"></div>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FKiVswaBJ58B8729sJuS3IAIWqyweW.png"
-                  alt="ASU student browsing books in library"
+                  src="/placeholder.svg?key=u3279"
+                  alt="Students exchanging textbooks"
                   className="w-full h-full object-cover"
                 />
                 <motion.div
