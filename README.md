@@ -14,7 +14,7 @@ BookBarter ASU is a peer-to-peer textbook exchange platform designed specificall
 
 ## 🚀 Live Demo
 
-[BookBarter ASU]([https://bookbarter-asu.vercel.app](https://v0-book-barter-asu-project.vercel.app/))
+[https://bookbarter-asu.vercel.app](https://v0-book-barter-asu-project.vercel.app/
 
 ## ✨ Key Features
 
