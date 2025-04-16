@@ -1,0 +1,93 @@
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
+
+export type MaterialType = "Textbook" | "Lab Manual" | "Notes" | "Study Guide"
+export type BookCondition = "Like New" | "Good" | "Fair" | "Poor"
+export type BookGenre = "STEM" | "Business" | "Arts" | "Humanities"
+
+export interface Database {
+  public: {
+    Tables: {
+      profiles: {
+        Row: {
+          id: string
+          email: string
+          full_name: string | null
+          avatar_url: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id: string
+          email: string
+          full_name?: string | null
+          avatar_url?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          email?: string
+          full_name?: string | null
+          avatar_url?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      books: {
+        Row: {
+          id: string
+          title: string
+          course_code: string
+          price: number
+          condition: BookCondition
+          material_type: MaterialType
+          genre: BookGenre
+          description: string | null
+          seller_id: string
+          is_sold: boolean
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          title: string
+          course_code: string
+          price: number
+          condition: BookCondition
+          material_type: MaterialType
+          genre: BookGenre
+          description?: string | null
+          seller_id: string
+          is_sold?: boolean
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          title?: string
+          course_code?: string
+          price?: number
+          condition?: BookCondition
+          material_type?: MaterialType
+          genre?: BookGenre
+          description?: string | null
+          seller_id?: string
+          is_sold?: boolean
+          created_at?: string
+          updated_at?: string
+        }
+      }
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      [_ in never]: never
+    }
+    Enums: {
+      material_type: MaterialType
+      book_condition: BookCondition
+      book_genre: BookGenre
+    }
+  }
+}
