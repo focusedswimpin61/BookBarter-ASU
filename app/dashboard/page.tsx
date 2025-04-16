@@ -1,13 +1,15 @@
 import { DashboardClient } from "./client"
-import { getBooks } from "@/app/actions/books"
-import { GUEST_USER, getCurrentUser } from "@/lib/local-store"
+import { getServerBooks } from "@/app/actions/get-server-books"
 
-export default async function DashboardPage() {
-  // Get books without authentication check
-  const books = await getBooks()
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: { tab?: string; genre?: string }
+}) {
+  const { tab = "browse", genre } = searchParams
 
-  // Get the current user or use guest user
-  const user = getCurrentUser() || GUEST_USER
+  // Get books using the server-side function
+  const books = await getServerBooks(genre as any)
 
-  return <DashboardClient user={user} books={books} />
+  return <DashboardClient initialTab={tab} books={books} />
 }

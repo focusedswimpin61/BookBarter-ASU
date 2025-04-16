@@ -91,3 +91,5 @@ export interface Database {
     }
   }
 }
+
+export { BookGenre, BookCondition, MaterialType, Database }
